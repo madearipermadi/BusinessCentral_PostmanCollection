@@ -1,0 +1,741 @@
+{
+	"info": {
+		"_postman_id": "e4861d4b-b98c-47c1-96cf-72f14a60911b",
+		"name": "BC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get_List_API_BC",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv1.0/{{yourtenantdomain}}/sandbox/api/v1.0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v1.0",
+						"{{yourtenantdomain}}",
+						"sandbox",
+						"api",
+						"v1.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_List_Extensions",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/microsoft/automation/V1.0/companies({{bcompanyid}})/extensions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"microsoft",
+						"automation",
+						"V1.0",
+						"companies({{bcompanyid}})",
+						"extensions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uninstall_Extension",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/microsoft/automation/V1.0/companies({{bcompanyid}})/extensions(176cf6a4-ebb5-439b-a499-4316936c0d77)/Microsoft.NAV.uninstall",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"microsoft",
+						"automation",
+						"V1.0",
+						"companies({{bcompanyid}})",
+						"extensions(176cf6a4-ebb5-439b-a499-4316936c0d77)",
+						"Microsoft.NAV.uninstall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload_Install_Extension",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/microsoft/automation/V1.0/companies({{bcompanyid}})/extensionUpload(0)/content",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"microsoft",
+						"automation",
+						"V1.0",
+						"companies({{bcompanyid}})",
+						"extensionUpload(0)",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Ext_Install_Status",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/microsoft/automation/V1.0/companies({{bcompanyid}})/extensionDeploymentStatus",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"microsoft",
+						"automation",
+						"V1.0",
+						"companies({{bcompanyid}})",
+						"extensionDeploymentStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Invoice_List_BC",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Invoice_List_SpesificNumberAndLine",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices?$filter=number eq 'S-INV102225'&$expand=salesInvoiceLines($filter=sequence eq 10000)",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices"
+					],
+					"query": [
+						{
+							"key": "$filter",
+							"value": "number eq 'S-INV102225'"
+						},
+						{
+							"key": "$expand",
+							"value": "salesInvoiceLines($filter=sequence eq 10000)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create_SalesInvoiceHeaderOnly",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"externalDocumentNumber\":\"\",\r\n   \"invoiceDate\":\"2018-12-25\",\r\n   \"dueDate\":\"2018-12-25\",\r\n   \"customerNumber\":\"10000\",\r\n   \"salesperson\":\"\",\r\n   \"pricesIncludeTax\":false\r\n}"
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_SalesInvoice_With_Lines",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/v2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)?$expand=salesInvoiceLines($filter=sequence eq 10000)",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)"
+					],
+					"query": [
+						{
+							"key": "$expand",
+							"value": "salesInvoiceLines($filter=sequence eq 10000)"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateSalesInvoiceWithLines",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"externalDocumentNumber\":\"\",\r\n   \"invoiceDate\":\"2018-12-25\",\r\n   \"dueDate\":\"2018-12-25\",\r\n   \"customerNumber\":\"10000\",\r\n   \"salesInvoiceLines\" :\r\n   [\r\n\t{\r\n\t   \"sequence\":10000,\r\n\t   \"lineType\":\"Item\",\r\n\t   \"itemId\": \"715f88b5-c1df-e911-bb22-000d3ab0ebc8\",\r\n\t   \"description\":\"12 GG INTERNATIONAL\",\r\n\t   \"unitPrice\":20000,\r\n\t   \"quantity\":10,\r\n       \"unitOfMeasure\": {\r\n            \"code\": \"PCS\",\r\n            \"displayName\": \"Piece\",\r\n            \"symbol\": null,\r\n            \"unitConversion\": null\r\n        }\r\n\t},\r\n\t{\r\n\t   \"sequence\":20000,\r\n\t   \"lineType\":\"Item\",\r\n\t   \"itemId\": \"715f88b5-c1df-e911-bb22-000d3ab0ebc8\",\r\n\t   \"description\":\"ES TEH MANIS\",\r\n\t   \"unitPrice\":5000,\r\n\t   \"quantity\":5,\r\n        \"unitOfMeasure\": {\r\n            \"code\": \"PCS\",\r\n            \"displayName\": \"Piece\",\r\n            \"symbol\": null,\r\n            \"unitConversion\": null\r\n        }\r\n\t}\r\n   ]\r\n}"
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_SalesInvoice",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices(1f27be78-7321-ea11-a814-000d3a8cd04a)",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices(1f27be78-7321-ea11-a814-000d3a8cd04a)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_SalesInvoiceHeader",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"externalDocumentNumber\": \"ABC\"\n}"
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv2.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v2.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_SalesInvoiceLine",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "If-Match",
+						"value": "*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"quantity\":20\r\n}"
+				},
+				"url": {
+					"raw": "https://api.businesscentral.dynamics.com/\nv1.0/sandbox/api/v1.0/companies({{bcompanyid}})/salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)/salesInvoiceLines('ce10c625-7421-ea11-a814-000d3a8cd04a-10000')",
+					"protocol": "https",
+					"host": [
+						"api",
+						"businesscentral",
+						"dynamics",
+						"com"
+					],
+					"path": [
+						"v1.0",
+						"sandbox",
+						"api",
+						"v1.0",
+						"companies({{bcompanyid}})",
+						"salesInvoices(ce10c625-7421-ea11-a814-000d3a8cd04a)",
+						"salesInvoiceLines('ce10c625-7421-ea11-a814-000d3a8cd04a-10000')"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
